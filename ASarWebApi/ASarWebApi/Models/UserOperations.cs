@@ -42,27 +42,60 @@ namespace ASarWebApi.Models
 
         }
 
-        
-        //CREATE
-        public async Task<UserModel> CreateUser(UserModel UM) {
+        //GET LAST
+        public async Task<UserModel> GetLast()
+        {
+            var query = await (from data in context.Users
+                                select data).ToListAsync();
+            var ret = query.Last();
+            return ret;
+       
+             
+             
+        }
+        //CREATE 
+        public  void CreateUser(UserModel UM) {
             context.Users.Add(new UserModel
             {
                 Name = UM.Name,
                 Birthdate = Convert.ToDateTime(UM.Birthdate)
             });
-            await context.SaveChangesAsync();
-
-            var query = new UserModel();
-            await Task.Run(() => {
-                query = (from datos in context.Users                           
-                           select datos).Last(); 
-            });
-            return query;
+            context.SaveChanges();
+            //GetLast to return this user? (I do not know how you like it more) 
         }
 
         //PUT
+        public async void UpdateUser(UserModel UM)
+        {
+            var consulta = (from datos in context.Users
+                            where datos.Id == UM.Id
+                            select datos).FirstOrDefault();
 
+            consulta.Name = UM.Name;
+            consulta.Birthdate = Convert.ToDateTime(UM.Birthdate);
+
+            await context.SaveChangesAsync();
+
+            
+        }
 
         //DELETE
+
+        public async Task<bool> DeleteUser(int id) {
+            var consulta = (from datos in context.Users
+                            where datos.Id == id
+                            select datos).FirstOrDefault();
+            context.Users.Remove(consulta);
+            try {
+                await context.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            }
+
     }
+
 }

@@ -13,7 +13,8 @@ namespace ASarWebApi
 
             // Rutas de API web
             config.MapHttpAttributeRoutes();
-
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
