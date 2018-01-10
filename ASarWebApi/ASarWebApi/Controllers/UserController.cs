@@ -67,8 +67,8 @@ namespace ASarWebApi.Controllers
         // DELETE api/<controller>/5
         
         public async Task<IHttpActionResult> Delete ([FromBody] int id)
-        {
-            if (UO.UserExist(id).Result)
+        {           
+            if (UO.UserExist(id))
             {
                 await UO.DeleteUser(id);
                 return Ok("Borrado");

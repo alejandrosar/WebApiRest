@@ -11,16 +11,15 @@ namespace ASarWebApi.Models
     {
         UserContext context = new UserContext();
 
-        public async Task<bool> UserExist(int id) {
+        public bool UserExist(int id) {
             Utilities.CheckEF CEF = new Utilities.CheckEF();
             bool exist = false;
-            var query = await (from data in context.Users
+            var query =  (from data in context.Users
                                where data.Id == id
-                               select data).FirstAsync();
-            await Task.Run(() =>
-            {
+                               select data).First();
+            
                 exist = CEF.CheckUserWithID(query);
-            });
+           
             return exist;
         }
 
