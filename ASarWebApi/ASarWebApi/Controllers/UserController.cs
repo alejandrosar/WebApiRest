@@ -25,6 +25,7 @@ namespace ASarWebApi.Controllers
                 {
                     UML = UO.GetAllUsers().Result;
                 });
+                
                 return Ok(UML);
             }
             catch(Exception ex)

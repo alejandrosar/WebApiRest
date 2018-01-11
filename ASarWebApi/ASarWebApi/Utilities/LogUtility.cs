@@ -32,7 +32,7 @@ namespace ASarWebApi.Utilities
 
                 SW.WriteAsync(text + Environment.NewLine + "--------------------------------------------------------------------------------------------------------"
                 + Environment.NewLine);
-                SW.Close();
+                //SW.Close();
 
             }
 

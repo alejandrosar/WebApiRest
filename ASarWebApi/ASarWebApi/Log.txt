@@ -26,4 +26,15 @@ Error in PutUser System.NotSupportedException: A second operation started on thi
    en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
    en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
-   en ASarWebApi.Models.UserOperations.<GetUser>d__2.MoveNext
+   en ASarWebApi.Models.UserOperations.<GetUser>d__2.MoveNextError in GetALLUser System.Exception: Se produjo una excepción de tipo 'System.Exception'.
+   en ASarWebApi.Controllers.UserController.<GetALLUser>d__3.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 28
+--------------------------------------------------------------------------------------------------------
+Error in GetALLUser System.Exception: Se produjo una excepción de tipo 'System.Exception'.
+   en ASarWebApi.Controllers.UserController.<GetALLUser>d__3.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 28
+--------------------------------------------------------------------------------------------------------
+Error in GetALLUser System.Exception: Se produjo una excepción de tipo 'System.Exception'.
+   en ASarWebApi.Controllers.UserController.<GetALLUser>d__3.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 28
+--------------------------------------------------------------------------------------------------------
+Error in GetALLUser System.Exception: Se produjo una excepción de tipo 'System.Exception'.
+   en ASarWebApi.Controllers.UserController.<GetALLUser>d__3.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 28
+--------------------------------------------------------------------------------------------------------
