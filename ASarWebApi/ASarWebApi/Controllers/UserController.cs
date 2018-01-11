@@ -107,11 +107,7 @@ namespace ASarWebApi.Controllers
         public async Task<IHttpActionResult> Delete ([FromBody] int id)
         {
             try
-            {
-                if (!UO.UserExist(id))
-                {
-                    
-                }
+            {   
                 if (UO.UserExist(id))
                 {
                     await UO.DeleteUser(id);
