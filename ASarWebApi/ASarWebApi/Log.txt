@@ -18,3 +18,12 @@ Error in GetUser System.InvalidOperationException: La secuencia no contiene elem
    en ASarWebApi.Models.UserOperations.UserExist(Int32 id) en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Models\UserOperations.cs:línea 17
    en ASarWebApi.Controllers.UserController.<GetUser>d__4.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 42
 --------------------------------------------------------------------------------------------------------
+Error in PutUser System.NotSupportedException: A second operation started on this context before a previous asynchronous operation completed. Use 'await' to ensure that any asynchronous operations have completed before calling another method on this context. Any instance members are not guaranteed to be thread safe.
+   en System.Data.Entity.Internal.ThrowingMonitor.EnsureNotEntered()
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.System.Data.Entity.Infrastructure.IDbAsyncEnumerable<T>.GetAsyncEnumerator()
+   en System.Data.Entity.Infrastructure.IDbAsyncEnumerableExtensions.<FirstAsync>d__1d`1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en ASarWebApi.Models.UserOperations.<GetUser>d__2.MoveNext

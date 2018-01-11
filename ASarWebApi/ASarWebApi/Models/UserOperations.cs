@@ -64,7 +64,7 @@ namespace ASarWebApi.Models
         }
 
         //PUT
-        public async void UpdateUser(UserModel UM)
+        public async Task UpdateUser(UserModel UM)
         {
             var consulta = (from datos in context.Users
                             where datos.Id == UM.Id

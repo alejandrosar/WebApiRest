@@ -91,7 +91,7 @@ namespace ASarWebApi.Controllers
                 }
                 //Update user
                 //The same case as in postUser
-                UO.UpdateUser(UM);
+                await UO.UpdateUser(UM);
                 UserModel toReturn = await UO.GetUser(UM.Id);
                 return Ok(toReturn);
             }
