@@ -46,9 +46,17 @@ namespace ASarWebApi.Tests
 
         [TestMethod]
         public void GetPathTest() {
-            LogUtility LU = new LogUtility();
-            string texto;
+            LogUtility LU = new LogUtility();            
+            string texto ="";            
             Assert.IsNotNull(LU.GetPath());
+            StringAssert.Equals(LU.GetPath(), texto);
+
+        }
+        [TestMethod]
+        public void WriteLogTest()
+        {
+            LogUtility LU = new LogUtility();
+            LU.WriteLog("test test test");
 
         }
         #endregion utilities

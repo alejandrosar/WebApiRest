@@ -29,7 +29,7 @@ namespace ASarWebApi.Controllers
             }
             catch(Exception ex)
             {
-                LU.WriteLog("Error in GetALLUser "+ex);
+                LU.WriteLog("Error in GetALLUser "+ ex);
                 return Content(HttpStatusCode.InternalServerError, "Error getting all users, contact with your admin");
             }
         }
@@ -69,9 +69,9 @@ namespace ASarWebApi.Controllers
                 UO.CreateUser(UM); // This method is not awaited because now is void, but it's ready for it
                                    //Return last user 
                                    //var toReturn =  UO.GetLast();
-                UserModel asd = new UserModel();
-                await Task.Run(() => asd = UO.GetLast().Result);
-                return Ok(asd);
+                UserModel toReturn = new UserModel();
+                await Task.Run(() => toReturn = UO.GetLast().Result);
+                return Ok(toReturn);
             }
             catch (Exception ex)
             {

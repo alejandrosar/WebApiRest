@@ -85,15 +85,12 @@ namespace ASarWebApi.Models
                             where datos.Id == id
                             select datos).FirstOrDefault();
             context.Users.Remove(consulta);
-            try {
+            
                 await context.SaveChangesAsync();
                 return true;
-            }
-            catch
-            {
-                return false;
-            }
-            }
+            
+            
+        }
 
     }
 
