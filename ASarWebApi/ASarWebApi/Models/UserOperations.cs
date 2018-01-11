@@ -16,7 +16,7 @@ namespace ASarWebApi.Models
             bool exist = false;
             var query =  (from data in context.Users
                                where data.Id == id
-                               select data).First();
+                               select data).FirstOrDefault();
             
                 exist = CEF.CheckUserWithID(query);
            

@@ -1,0 +1,20 @@
+﻿Error in GetUser System.InvalidOperationException: La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   en System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en ASarWebApi.Models.UserOperations.UserExist(Int32 id) en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Models\UserOperations.cs:línea 17
+   en ASarWebApi.Controllers.UserController.<GetUser>d__4.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 42
+--------------------------------------------------------------------------------------------------------
+Error in GetUser System.InvalidOperationException: La secuencia no contiene elementos
+   en System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   en System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   en System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   en ASarWebApi.Models.UserOperations.UserExist(Int32 id) en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Models\UserOperations.cs:línea 17
+   en ASarWebApi.Controllers.UserController.<GetUser>d__4.MoveNext() en C:\Users\aleja\Source\Repos\WebApiRest\ASarWebApi\ASarWebApi\Controllers\UserController.cs:línea 42
+--------------------------------------------------------------------------------------------------------

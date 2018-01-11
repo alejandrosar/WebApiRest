@@ -43,6 +43,14 @@ namespace ASarWebApi.Tests
             user.Name = "";
             Assert.IsFalse(CEF.CheckUserWithoutID(user));
         }
+
+        [TestMethod]
+        public void GetPathTest() {
+            LogUtility LU = new LogUtility();
+            string texto;
+            Assert.IsNotNull(LU.GetPath());
+
+        }
         #endregion utilities
     }
 }
